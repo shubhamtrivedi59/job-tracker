@@ -62,5 +62,5 @@ Application
 
 ## Current status
 Milestone 0: done (2026-10-24). Covered: client vs server, HTTP request/response, GET/POST/DELETE, 200/201/404, headers (Accept, Content-Type), SSR vs CSR (JS-disabled experiment), curl.
-Milestone 1: in progress. App created and `npm run dev` works. Next: Server vs Client Component log demo, then `/applications` list.
+Milestone 1: in progress. Done: `/applications` list and `/applications/[id]` detail (+ `loading.tsx`) from hard-coded data in `src/lib/applications.ts`. Next: nav bar in `layout.tsx`, then M1 recap. Note: `cacheComponents: true` is on in next.config.ts, so runtime data (params, cookies) must sit under Suspense/loading.tsx.
 Update these lines as milestones are completed.

@@ -62,7 +62,7 @@ Application
 
 ## Current status
 Milestone 0: done (2026-10-24). Covered: client vs server, HTTP request/response, GET/POST/DELETE, 200/201/404, headers (Accept, Content-Type), SSR vs CSR (JS-disabled experiment), curl.
-Milestone 1: done (2026-10-24), except the nav bar in `layout.tsx` (still to add).
+Milestone 1: done (2026-10-24). Nav bar added 2026-10-26 (`src/components/nav-bar.tsx`; active highlight via usePathname in a Suspense boundary).
 Milestone 2: done (2026-10-26). Local Postgres 18 via Docker Compose (`compose.yml`), Prisma 7.10.1 pinned (`prisma7.config.ts`, client generated to `src/generated/prisma`), `Application` model + Status/Permit enums, `init` migration, `prisma/seed.ts`, pages read via `src/lib/applications.ts` → `src/lib/prisma.ts`. Skipped: optional raw-SQL exercise.
-Milestone 3: not started.
+Milestone 3: in progress. Styled UI built for `/applications/new` (form has no `action` yet), list and detail pages restyled, `/` redirects to `/applications`. Next: Server Action + Zod to save the form.
 Update these lines as milestones are completed.

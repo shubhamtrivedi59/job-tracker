@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { getApplications } from '@/lib/applications';
 
-const ApplicationsPage = () => {
+const ApplicationsPage = async () => {
     // Runs on the server: a plain function call, no fetch/useEffect/loading state.
-    const applications = getApplications();
+    const applications = await getApplications();
 
     return (
         <main className="mx-auto max-w-3xl p-6">

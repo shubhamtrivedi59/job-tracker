@@ -6,7 +6,7 @@ import { getApplicationById } from '@/lib/applications';
 const ApplicationDetailPage = async (props: PageProps<'/applications/[id]'>) => {
     // `id` comes from the URL: /applications/2 → id = '2' (always a string).
     const { id } = await props.params;
-    const application = getApplicationById(id);
+    const application = await getApplicationById(id);
 
     // Unknown id → render the 404 page and stop here (notFound() throws).
     if (!application) {

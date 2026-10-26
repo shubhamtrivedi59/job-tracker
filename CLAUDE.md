@@ -58,9 +58,11 @@ Application
 
 ## Environment notes
 - Project lives at `~/Desktop/Learning/job-tracker` (Next.js 16.4.3, created 2026-10-24, git initialised by create-next-app).
-- Node: dev server runs on `/usr/local/bin/node` v24. nvm is also installed with default 18.20 — if `node -v` shows 18, run `nvm alias default system` (or `nvm use system`). No Docker: use Neon for Postgres in M2.
+- Node v24 (nvm default = system). Docker Desktop installed; DB starts with `docker compose up -d`. Neon is for production (M8).
 
 ## Current status
 Milestone 0: done (2026-10-24). Covered: client vs server, HTTP request/response, GET/POST/DELETE, 200/201/404, headers (Accept, Content-Type), SSR vs CSR (JS-disabled experiment), curl.
-Milestone 1: in progress. Done: `/applications` list and `/applications/[id]` detail (+ `loading.tsx`) from hard-coded data in `src/lib/applications.ts`. Next: nav bar in `layout.tsx`, then M1 recap. Note: `cacheComponents: true` is on in next.config.ts, so runtime data (params, cookies) must sit under Suspense/loading.tsx.
+Milestone 1: done (2026-10-24), except the nav bar in `layout.tsx` (still to add).
+Milestone 2: done (2026-10-26). Local Postgres 18 via Docker Compose (`compose.yml`), Prisma 7.10.1 pinned (`prisma7.config.ts`, client generated to `src/generated/prisma`), `Application` model + Status/Permit enums, `init` migration, `prisma/seed.ts`, pages read via `src/lib/applications.ts` → `src/lib/prisma.ts`. Skipped: optional raw-SQL exercise.
+Milestone 3: not started.
 Update these lines as milestones are completed.
